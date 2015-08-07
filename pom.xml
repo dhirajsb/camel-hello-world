@@ -364,6 +364,16 @@
   <!-- fusesource repo for karaf snapshot plugin -->
   <pluginRepositories>
     <pluginRepository>
+      <id>central</id>
+      <url>http://repo1.maven.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
       <id>fusesource-repo</id>
       <url>http://repo.fusesource.com/nexus/content/groups/m2-proxy</url>
       <releases>
