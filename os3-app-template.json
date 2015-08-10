@@ -36,7 +36,7 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "name": "karaf4-sti",
+                "name": "karaf4-sti-${APP_NAME}",
                 "creationTimestamp": null,
                 "labels": {
                     "app": "${APP_NAME}"
@@ -104,7 +104,7 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "karaf4-sti:latest"
+                            "name": "karaf4-sti-${APP_NAME}:latest"
                         },
                         "env": [
                             {
