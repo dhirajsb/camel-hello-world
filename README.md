@@ -9,3 +9,11 @@ This example uses a timer to trigger every 5th second, and then writes a message
 The goals karaf:assembly and karaf:archive MUST be called to create the custom karaf assembly as shown in the command below -
 
     mvn clean install karaf:assembly karaf:archive 
+
+# Running on OpenShift v3
+
+If you would like to create an application template to start apps like this one on OpenShift v3, then just run the following OpenShift command:
+
+   curl -s -L https://raw.githubusercontent.com/chirino/camel-hello-world/master/os3-app-template.json | oc create -f -
+   
+This will add the 'fuse-karaf' App to the list of Apps that you can create in the OpenShift v3 console when you click the Add to project button.
