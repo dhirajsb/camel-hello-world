@@ -106,6 +106,7 @@
                             "kind": "ImageStreamTag",
                             "name": "karaf4-sti-${APP_NAME}:latest"
                         },
+                        "incremental": true,
                         "env": [
                             {
                                 "name": "MAVEN_ARGS",
