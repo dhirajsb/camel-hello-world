@@ -46,7 +46,7 @@
     <!-- karaf4 custom assembly for karaf4-sti -->
     <docker.env.KARAF4_ASSEMBLY>${project.artifactId}-${project.version}.tar.gz</docker.env.KARAF4_ASSEMBLY>
 
-    <docker.from>fabric8/base-sti</docker.from>
+    <docker.from>dhirajsb/fuse-sti</docker.from>
 
     <fabric8.dockerPrefix>docker.io/</fabric8.dockerPrefix>
     <fabric8.dockerUser>fabric8/</fabric8.dockerUser>

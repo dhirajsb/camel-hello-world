@@ -36,14 +36,14 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "name": "karaf4-sti-${APP_NAME}",
+                "name": "fuse-sti-${APP_NAME}",
                 "creationTimestamp": null,
                 "labels": {
                     "app": "${APP_NAME}"
                 }
             },
             "spec": {
-                "dockerImageRepository": "dhirajsb/karaf4-sti"
+                "dockerImageRepository": "dhirajsb/fuse-sti"
             },
             "status": {
                 "dockerImageRepository": ""
@@ -104,10 +104,15 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "karaf4-sti-${APP_NAME}:latest"
+                            "name": "fuse-sti-${APP_NAME}:latest"
                         },
                         "incremental": true,
+                        "forcePull": true,
                         "env": [
+                            {
+                                "name": "BUILD_LOGLEVEL",
+                                "value": "5"
+                            },
                             {
                                 "name": "MAVEN_ARGS",
                                 "value": "${MAVEN_ARGS}"
