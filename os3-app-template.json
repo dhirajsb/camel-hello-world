@@ -180,7 +180,15 @@
                             {
                                 "name": "${APP_NAME}",
                                 "image": "library/${APP_NAME}:latest",
-                                "resources": {}
+                                "resources": {},
+                                "ports" : [ {
+                                    "containerPort" : 8778,
+                                    "name" : "jolokia",
+                                    "protocol" : "TCP"
+                                } ],
+                                "env" : [
+                                    { "name":"JOLOKIA_PORT", "value":"8778"}
+                                ]
                             }
                         ]
                     }
